@@ -3,7 +3,20 @@
 #include <stdio.h>
 #include <string.h>
 
-
+/**
+ * This program implements a substitution cipher for text encryption.
+ * It maps each letter in the input text to a different letter based on a provided key.
+ * The key is a string of 26 unique alphabetical characters that represents the substitution mapping.
+ * The user inputs the key and the plaintext to be encrypted.
+ * The program then outputs the ciphertext, which is the result of applying the substitution cipher to the input text.
+ * 
+ * The substitution cipher replaces each letter in the plaintext with a corresponding letter from the key.
+ * For instance, if the key is "ZEBRASCDFGHIJKLMNOPQRSTUVWXYA", then 'A' is substituted with 'Z', 'B' with 'E', etc.
+ * 
+ * The program handles both uppercase and lowercase letters, preserving their cases in the ciphertext.
+ * Non-alphabetic characters (such as spaces and punctuation) are left unchanged in the output.
+ * The program also checks for the validity of the key, ensuring it contains all 26 unique alphabetical characters.
+ */
 
 bool is_valid(string str)
 {

@@ -2,7 +2,17 @@
 #include <stdio.h>
 
 /**
- * This program validates a credit card number and identifies its type.
+ * This program calculates the credit card validity based on the Luhn algorithm.
+ *
+ * @param card_number The credit card number provided by the user.
+ * @return Returns true if the credit card number is valid according to the Luhn algorithm, otherwise false.
+ *
+ * The Luhn algorithm is used to validate various identification numbers, such as credit card numbers.
+ * It works by summing the digits of the number, with every second digit from the right being doubled.
+ * If the total modulo 10 is equal to 0, the number is considered valid.
+ * 
+ * For example, for the card number "4532015112830366", the program applies the algorithm
+ * to check if the number is valid or not.
  */
 
 int digit_length(long num)
