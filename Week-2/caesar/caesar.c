@@ -3,7 +3,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/**
+ * This program implements the Caesar cipher encryption algorithm.
+ * It shifts each letter of the input text by a fixed number of positions in the alphabet.
+ * The user provides a key (the number of positions to shift) and the plaintext to be encrypted.
+ * The program then outputs the ciphertext, which is the result of applying the Caesar cipher to the input text.
+ * 
+ * The Caesar cipher is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.
+ * For example, with a shift of 3, 'A' becomes 'D', 'B' becomes 'E', and so on.
+ * The program handles both uppercase and lowercase letters, ensuring the case of the letters is preserved in the ciphertext.
+ * Non-alphabetic characters are left unchanged in the output.
+ */
 
 int get_key(string str)
 {
