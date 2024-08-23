@@ -4,12 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-/**
- * Count the number of alphabetic characters in the text.
- *
- * @param text The input string.
- * @return The number of alphabetic characters.
- */
+
 
 int letter_count(string text)
 {
