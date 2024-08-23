@@ -1,9 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
 
-/**
- * This program validates a credit card number and identifies its type.
- */
 
 int digit_length(long num)
 {
