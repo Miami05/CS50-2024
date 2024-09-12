@@ -1,0 +1,23 @@
+HTML Tags
+<section>: Defines a section of content on the webpage.
+<h2>: Represents a level-2 heading, used for section titles.
+<form>: Creates an HTML form for user input.
+<label>: Provides labels for form controls.
+<input>: Defines an input field where users can enter data.
+<textarea>: Allows users to input multi-line text.
+<button>: Represents a clickable button, typically used to submit forms.
+<p>: Represents a paragraph of text, used here for displaying messages.
+<div>: A generic container used for grouping and styling content.
+<strong>: Defines text with strong importance, often bolded.
+
+CSS Properties
+background-color: Sets the background color of an element.
+padding: Adds space inside the element's border.
+border-radius: Rounds the corners of an element.
+box-shadow: Applies shadow effects around an element's frame.
+color: Sets the text color of an element.
+
+JavaScript
+Used to add interactivity to the form, such as validating user input and providing feedback without refreshing the page.
+The script prevents the default form submission behavior,
+checks if the email and message fields are filled, and displays a success or error message accordingly.

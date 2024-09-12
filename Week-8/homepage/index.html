@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <header>
+            <h1>Ledio Durmishaj's Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="about" id="#about">
+            <h2>About Me</h2>
+            <p>Hi I'm Ledio Durmishaj, a passionate software developer with a knack for creating user-friendly, accessible,
+                and inclusive software applications. I specialize in:</p>
+                <ul>
+                    <li>HTML/CSS/JS</li>
+                    <li>C/C++</li>
+                    <li>Python</li>
+                </ul>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p></p>
+            <div class="project">
+                <h3>Project 1: Portfolio Website</h3>
+                <p>A personal portfolio website to showcase my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/johndoe/portfolio-website" target="_blank">View on GitHub</a>
+            </div>
+
+            <div class="project">
+                <h3>Project 2: Libft</h3>
+                <p>An library. Implemented using C.</p>
+                <a href="https://github.com/johndoe/task-manager-app" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+                <br>
+                <button type="submit">Send</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+        <footer>
+            <p>&copy; 2024 Ledio Durmishaj</p>
+        </footer>
+        <script>
+            document.querySelector('#contact-form').addEventListener('submit', function(event){
+                event.preventDefault();
+
+                const email = document.getElementById('email');
+                const message = document.getElementById('message');
+                const formMessage = document.getElementById('form-message');
+                if (email && message)
+                {
+                    formMessage.textContent = 'Thank you for your message';
+                    formMessage.style.color = 'green';
+                    document.getElementById('#contact-form').reset();
+                }
+                else
+                {
+                    formMessage.textContent = 'Please fill out the field';
+                    formMessage.style.color = 'red';
+                }
+            });
+        </script>
+    </body>
+</html>

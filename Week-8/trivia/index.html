@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            let correct = document.querySelector('.correct');
+            correct.addEventListener("click", function(){
+                correct.style.backgroundColor = "green";
+                document.querySelector("#answer1").innerHTML = "Correct!";
+            });
+
+            let incorrect = document.querySelectorAll('.incorrect');
+            for (let i = 0; i < incorrect.length; i++) {
+                incorrect[i].addEventListener('click', function(){
+                    incorrect[i].style.backgroundColor = "red";
+                    document.querySelector("#answer1").innerHTML = "Incorrect!";
+                });
+            }
+            document.querySelector('#check').addEventListener('click', function(){
+                let answer = document.querySelector('input');
+                if (answer.value == 'Ottawa')
+                {
+                    answer.style.backgroundColor = "green";
+                    document.querySelector("#answer2").innerHTML = "Correct!";
+                }
+                else
+                {
+                    answer.style.backgroundColor = 'red';
+                    document.querySelector("#answer2").innerHTML = "Incorrect!";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice</h2>
+            <hr>
+            <h3>Which country has the most islands?</h3>
+            <button class="incorrect">Greece</button>
+            <button class="correct">Sweden</button>
+            <button class="incorrect">Philippines</button>
+            <button class="incorrect">Indonesia</button>
+            <button class="incorrect">Japan</button>
+            <p id="answer1"></p>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>What is the capital of Canada?</h3>
+            <form>
+                <input placeholder="Answer" type="text">
+                <button id="check" type="button">Check Answer</button>
+                <p id="answer2"></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
