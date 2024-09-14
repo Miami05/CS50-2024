@@ -62,6 +62,27 @@ def index():
     return render_template("index.html", stocks_data=stocks_data, status=status, cash=cash)
 
 
+@app.route("/add_cash", methods=["GET", "POST"])
+@login_required
+def add_cash():
+    """Allow users to add additional cash to their account."""
+    if request.method == "POST":
+        amount = request.form.get("amount")
+
+        if not amount or not amount.isdigit() or int(amount) <= 0:
+            flash("Please enter a valid positive amount.")
+            return redirect("/add_cash")
+        amount = int(amount)
+        user_id = session["user_id"]
+        user_cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)[0]["cash"]
+        new_balance = amount + user_cash
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", new_balance, user_id)
+        flash(f"Successfully added ${amount} to your account!")
+        return redirect("/")
+
+    return render_template("add_cash.html")
+
+
 @app.route("/password", methods=["GET", "POST"])
 @login_required
 def password():
