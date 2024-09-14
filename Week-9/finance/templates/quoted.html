@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {% if stock %}
+        <p>A share of {{ stock.name }} ({{ stock.symbol }})
+            costs {{ stock.price | usd }}. </p>
+    {% else %}
+            <p>No stock information avaible.</p>
+    {% endif %}
+{% endblock %}
